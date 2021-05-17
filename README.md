@@ -1,3 +1,8 @@
+# TailwindCSS Starter Template Documentation
+## Getting Started
+### Node Modules
+First and foremost, make sure to run `npm install`.  This will install all of the required dependencies and generate your **node_modules** folder.  This step is very important.
+
 ## Project Styles
 ### TailwindCSS
 This project uses [TailwindCSS](https://tailwindcss.com/ "TailwindCSS"), a utility-first CSS framework.  The required dependencies should already be included in this project.  If you are missing the **node_modules** folder, simply run `npm install`, and it should generate with the dependencies specified in the **package.json** file.
