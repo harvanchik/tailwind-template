@@ -1,6 +1,6 @@
 ## Project Styles
 ### TailwindCSS
-This project uses [TailwindCSS](https://tailwindcss.com/ "TailwindCSS"), a utility-first CSS framework.  The required dependencies should already be included in this project.  If you are missing the **node_moudles** folder, simply run `npm install`, and it should generate with the dependencies specified in the **package.json** file.
+This project uses [TailwindCSS](https://tailwindcss.com/ "TailwindCSS"), a utility-first CSS framework.  The required dependencies should already be included in this project.  If you are missing the **node_modules** folder, simply run `npm install`, and it should generate with the dependencies specified in the **package.json** file.
 ### Files
 In the root folder of the project, there is an **assets/styles** folder.  This houses the **tailwind.css** file.  This file is used to eventually generate the fully compiled TailwindCSS styles.  Once compiled, it outputs the classes to the **styles.css** file, also located in the **assets/styles** folder.
 ### Just In Time Mode
