@@ -11,7 +11,9 @@ To work in a development environment, run the `dev` npm script.  To do so, use e
 - Run `npm run dev` in the root folder of the project.
 - Use the NPM scripts shortcut in the bottom left corner of the File Explorer tab in VS Code.
 
-This will start a **long-running watch process** that will **generate** your styles **on-demand** instead of generating everything in advance.  This is extremely useful for making development efficient and faster.
+This will start a **long-running watch process** that will **generate** your styles **on-demand** instead of generating everything in advance.  This is extremely useful for making development efficient and faster.  In the terminal, you should see the initial complie message and the amount of time it took.  After that, you'll see "Waiting for file changes..."  Anytime you save an HTML file or the **tailwind.css** file, the CSS will be processed and re-compiled.
+
+Please note that classes are add on-demand, but no removed on-demand.  This is currently by designed as [stated by Adam Wathan](https://github.com/tailwindlabs/tailwindcss/issues/4098#issuecomment-821867583 "stated by Adam Wathan").
 
 To kill the watch process, put your focus in the terminal that the process is running it, and press `CTRL + C`.  You should be prompted to confirm your terminal of the process.  Confirm your choice by entering `Y` followed by the `ENTER` key.
 
