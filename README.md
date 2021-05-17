@@ -6,6 +6,8 @@ First and foremost, make sure to run `npm install`.  This will install all of th
 ## Project Styles
 ### TailwindCSS
 This project uses [TailwindCSS](https://tailwindcss.com/ "TailwindCSS"), a utility-first CSS framework.  The required dependencies should already be included in this project.  If you are missing the **node_modules** folder, simply run `npm install`, and it should generate with the dependencies specified in the **package.json** file.
+### Tailwind Intellisense
+To enable Tailwind CSS Intellisense, you'll need the VS Code extension.  I suggest installing the [Tailwind CSS Extension Pack](https://marketplace.visualstudio.com/items?itemName=andrewmcodes.tailwindcss-extension-pack) which comes with a few extensions that all work together to make using TailwindCSS a much better experience.  To learn more about it, click the link above.
 ### Files
 In the root folder of the project, there is an **assets/styles** folder.  This houses the **tailwind.css** file.  This file is used to eventually generate the fully compiled TailwindCSS styles.  Once compiled, it outputs the classes to the **styles.css** file, also located in the **assets/styles** folder.
 ### Just In Time Mode
