@@ -22,6 +22,13 @@ Please note that classes are add on-demand, but not removed on-demand.  This is 
 
 To kill the watch process, put your focus in the terminal that the process is running it, and press `CTRL + C`.  You should be prompted to confirm your terminal of the process.  Confirm your choice by entering `Y` followed by the `ENTER` key.
 
+### Live Server
+We will be using a VS Code extension to start our server up.  Search for "Live Server" in the VS Code extensions tab.  Alternatively, you can find it on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+Once you download and install the extension, you might see a new button in the lower right-hand corner of the window in the blue riddon.  It says **Go Live**.  When you click that, it should start the server and open it on your browser.
+
+If you do not see the button, simply right click on the **index.html** file in the VS Code file explorer, and click **Open with Live Server**.
+
 ## Building for Production
 Building for production is similar to building for development.  Do either of the following to build the CSS for production.
 - Run `npm run prod` in the root folder of the project.
