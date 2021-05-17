@@ -557,6 +557,22 @@ video {
 	--tw-ring-offset-shadow: 0 0 #0000;
 	--tw-ring-shadow: 0 0 #0000;
 }
-.justify-start {
-	justify-content: flex-start;
+.flex {
+	display: flex;
+}
+.h-screen {
+	height: 100vh;
+}
+.w-full {
+	width: 100%;
+}
+.items-center {
+	align-items: center;
+}
+.justify-center {
+	justify-content: center;
+}
+.text-5xl {
+	font-size: 3rem;
+	line-height: 1;
 }
