@@ -1,7 +1,7 @@
 # TailwindCSS Starter Template Documentation
 ## Getting Started
 ### Node Modules
-First and foremost, make sure to run `npm install`.  This will install all of the required dependencies and generate your **node_modules** folder.  This step is very important.
+First and foremost, make sure to run `npm install` in the terminal in the root directory of this project.  This will install all of the required dependencies and generate your **node_modules** folder.  This step is very important.
 
 ## Project Styles
 ### TailwindCSS
