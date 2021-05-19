@@ -13,7 +13,7 @@ In the root folder of the project, there is an **assets/styles** folder.  This h
 ### Just In Time Mode
 This project uses a version of TailwindCSS called [Just In Time (JIT)](https://tailwindcss.com/docs/just-in-time-mode "Just In Time (JIT)") mode.  Essentially, this means that our **styles.css** file will only include CSS classes that it files in our HTML files in the root folder.  This can be [disabled](https://tailwindcss.com/docs/just-in-time-mode#enabling-jit-mode "disabled") in the **tailwind.config.js** file.
 ### CSS Optimizations
-This project includes the [cssnano plugin](https://cssnano.co/docs/introduction) for postcss.  This means that your **styles.css** file will be minified and have all comments removed.  To disable this, simply remove the cssnano plugin from the plugin's array in the **postcss.config.js** file.
+This project includes the [cssnano plugin](https://cssnano.co/docs/introduction) for postcss.  This means that your **styles.css** file will be minified and have all comments removed.  To disable this, simply remove the cssnano plugin from the array of plugins in the **postcss.config.js** file.
 
 ## Working in Development
 To work in a development environment, run the `dev` npm script.  To do so, use either method outlined below.
