@@ -21,7 +21,6 @@ function html() {
             minifyCSS: true,
             minifyJS: true,
             removeEmptyAttributes: true,
-            removeRedundantAttributes: true,
             removeAttributeQuotes: true
         }))
         .pipe(rewrite({ manifest }))
