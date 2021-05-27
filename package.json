@@ -11,9 +11,17 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@tailwindcss/forms": "^0.3.2",
         "autoprefixer": "^10.2.5",
         "cross-env": "^7.0.3",
         "cssnano": "^5.0.2",
+        "del": "^6.0.0",
+        "gulp": "^4.0.2",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-minify": "^3.1.0",
+        "gulp-rev": "^9.0.0",
+        "gulp-rev-rewrite": "^4.0.0",
+        "gulp-svgmin": "^3.0.0",
         "postcss": "^8.2.15",
         "postcss-cli": "^8.3.1",
         "tailwindcss": "^2.1.2"
