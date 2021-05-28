@@ -39,3 +39,16 @@ Building for production is similar to building for development.  Do either of th
 - Execute `prod` in the NPM scripts shortcut located at the bottom left of the File Explorer tab in VS Code.
 
 Contrary to the development script we used before, this will not start a long-running watch process; rather, this script compiles the CSS once and only once.  It will take only classes found in the HTML files located in the root folder and compile them into the **styles.css** file located in **assets/styles/styles.css**.
+
+### Deploying Project
+This project uses [Gulp](https://www.npmjs.com/package/gulp) to build your project for deployment. By running Gulp, it will create a **dist** folder in the root of your project. Gulp will then copy over all the necessary files from your project's source and assets into the **dist** folder. 
+
+In addition to that, Gulp will also optimize and minify the files as needed. The HTML, SVG, and JavaScript files will all be minified. Minifying a file simply means removing whitespace and other unnecessary characters/symbols. We do this to reduce the size of the files(s).
+
+The images and styles (css) will be copied over to the dist as well. Since the css is already minified by Tailwind's use of [PostCSS](https://postcss.org/) and the [JIT Engine](https://tailwindcss.com/docs/just-in-time-mode), we do not need to minify it here. The images are not optimized in the Gulp process, so I recommend optimizing them yourself. A great site to optimize PNG and JPG files is [TinyPNG/JPG](https://tinypng.com/).
+
+### Using Gulp
+So how do you use Gulp? It's very easy! I will give you three options. 1) Open the VS Code terminal and run the command `gulp`. This will execute the default task found in the **gulpfile.js** file in the root directory. The default task then executes, in order, all of the other tasks to build the project. 2) Alternatively, I have created an NPM script called `gulp`. You can run this from the bottom left corner of the VS Code window in the NPM Scripts tab. 3) If you do not see the NPM scripts tab, you may also run this command in the terminal by running `npm run gulp`, but at that point, just typing `gulp` is easier.
+
+### What if I Need a Different Output Folder Name?
+In the case that you need to change the name of the output folder from **dist** to something else, simply navigate to the **gulpfile.js** file and find the variable `destination` located near the top of the file. By default, it is set to `dist`, but you may change this by changing the string to whatever you'd like. Another common destination folder name is `docs`, which is used for deploying a project to [GitHub Pages](https://pages.github.com/).
