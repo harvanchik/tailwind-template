@@ -82,7 +82,7 @@ function svg() {
 }
 
 /*
- * Remove all contents within the destination folder
+ * Remove all content within the destination folder
  */
 function clean() {
     console.log('works');
@@ -90,6 +90,6 @@ function clean() {
 }
 
 /*
- * The default talk (triggered when running 'gulp' in the console)
+ * The default task (triggered when running 'gulp' in the console)
  */
 gulp.task('default', gulp.series(clean, styles, javascript, images, svg, html));
