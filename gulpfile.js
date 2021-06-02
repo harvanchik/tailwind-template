@@ -7,15 +7,16 @@ const svgmin = require('gulp-svgmin');
 const rev = require('gulp-rev');
 const rewrite = require('gulp-rev-rewrite');
 
-const destination = 'dist';  // the destination folder of the gulped content (change as needed (i.e. 'docs'))
-const manifest = './rev-manifest.json';  // the name of the manifest file (do not edit unless you know what you're doing)
+const root = './';  // the path to the root of your project (you probably do not need to change this)
+const destination = `${root}dist`;  // the destination folder of the gulped content (change as needed (i.e. 'docs'))
+const manifest = `${root}rev-manifest.json`;  // the name of the manifest file (do not edit unless you know what you're doing)
 
 /*
  * Minify the HTML
  */
 function html() {
     const location = readFileSync(manifest);
-    return gulp.src(['./**/*.html', '!./node_modules/**/*.html'])
+    return gulp.src([`${root}**/*.html`, `!${root}node_modules/**/*.html`])
         .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true,
@@ -25,25 +26,25 @@ function html() {
             removeAttributeQuotes: true
         }))
         .pipe(rewrite({ location }))
-        .pipe(gulp.dest(`./${destination}`));
+        .pipe(gulp.dest(`${root}${destination}`));
 }
 
 /*
  * Copy the Styles
  */
 function styles() {
-    return gulp.src(['./assets/styles/styles.css'])
+    return gulp.src([`${root}assets/styles/styles.css`])
         .pipe(rev())
-        .pipe(gulp.dest(`./${destination}/assets/styles`))
+        .pipe(gulp.dest(`${root}${destination}/assets/styles`))
         .pipe(rev.manifest(manifest, { merge: false }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest(root));
 }
 
 /*
  * Minify the JavaScript
  */
 function javascript() {
-    return gulp.src(['./assets/js/*.js'])
+    return gulp.src([`${root}assets/js/*.js`])
         .pipe(jsmin({
             noSource: true,
             ext: { min: '.js', },
@@ -54,39 +55,39 @@ function javascript() {
             }
         }))
         .pipe(rev())
-        .pipe(gulp.dest(`./${destination}/assets/js`))
+        .pipe(gulp.dest(`${root}${destination}/assets/js`))
         .pipe(rev.manifest(manifest, { merge: true }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest(root));
 }
 
 /*
  * Copy the Images
  */
 function images() {
-    return gulp.src(['./assets/img/**/*.{png,jpg,jpeg,jfif,gif,webp,pdf,bmp,tif,tiff,raw,cr2,nef,sr2,heif,hdr,ppm,pgm,pbm,pnm,exif}'])
+    return gulp.src([`${root}assets/img/**/*.{png,jpg,jpeg,jfif,gif,webp,pdf,bmp,tif,tiff,raw,cr2,nef,sr2,heif,hdr,ppm,pgm,pbm,pnm,exif}`])
         .pipe(rev())
-        .pipe(gulp.dest(`./${destination}/assets/img`))
+        .pipe(gulp.dest(`${root}${destination}/assets/img`))
         .pipe(rev.manifest(manifest, { merge: true }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest(root));
 }
 
 /*
  * Minify the SVGs
  */
 function svg() {
-    return gulp.src(['./assets/img/**/*.svg'])
+    return gulp.src([`${root}assets/img/**/*.svg`])
         .pipe(svgmin())
         .pipe(rev())
-        .pipe(gulp.dest(`./${destination}/assets/img`))
+        .pipe(gulp.dest(`${root}${destination}/assets/img`))
         .pipe(rev.manifest(manifest, { merge: true }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest(root));
 }
 
 /*
  * Remove all content within the destination folder
  */
 function clean() {
-    return del([`./${destination}/**`, `!./${destination}`]);
+    return del([`${root}${destination}/**`, `!${root}${destination}`]);
 }
 
 /*
