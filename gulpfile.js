@@ -8,12 +8,13 @@ const rev = require('gulp-rev');
 const rewrite = require('gulp-rev-rewrite');
 
 const destination = 'dist';  // the destination folder of the gulped content (change as needed (i.e. 'docs'))
-const manifest = readFileSync('./rev-manifest.json');  // the name of the manifest file (do not edit unless you know what you're doing)
+const manifest = './rev-manifest.json';  // the name of the manifest file (do not edit unless you know what you're doing)
 
 /*
  * Minify the HTML
  */
 function html() {
+    const location = readFileSync(manifest);
     return gulp.src(['./**/*.html', '!./node_modules/**/*.html'])
         .pipe(htmlmin({
             collapseWhitespace: true,
@@ -23,7 +24,7 @@ function html() {
             removeEmptyAttributes: true,
             removeAttributeQuotes: true
         }))
-        .pipe(rewrite({ manifest }))
+        .pipe(rewrite({ location }))
         .pipe(gulp.dest(`./${destination}`));
 }
 
@@ -34,7 +35,7 @@ function styles() {
     return gulp.src(['./assets/styles/styles.css'])
         .pipe(rev())
         .pipe(gulp.dest(`./${destination}/assets/styles`))
-        .pipe(rev.manifest({ merge: false }))
+        .pipe(rev.manifest(manifest, { merge: false }))
         .pipe(gulp.dest('./'));
 }
 
@@ -54,7 +55,7 @@ function javascript() {
         }))
         .pipe(rev())
         .pipe(gulp.dest(`./${destination}/assets/js`))
-        .pipe(rev.manifest({ merge: true }))
+        .pipe(rev.manifest(manifest, { merge: true }))
         .pipe(gulp.dest('./'));
 }
 
@@ -65,7 +66,7 @@ function images() {
     return gulp.src(['./assets/img/**/*.{png,jpg,jpeg,jfif,gif,webp,pdf,bmp,tif,tiff,raw,cr2,nef,sr2,heif,hdr,ppm,pgm,pbm,pnm,exif}'])
         .pipe(rev())
         .pipe(gulp.dest(`./${destination}/assets/img`))
-        .pipe(rev.manifest({ merge: true }))
+        .pipe(rev.manifest(manifest, { merge: true }))
         .pipe(gulp.dest('./'));
 }
 
@@ -77,7 +78,7 @@ function svg() {
         .pipe(svgmin())
         .pipe(rev())
         .pipe(gulp.dest(`./${destination}/assets/img`))
-        .pipe(rev.manifest({ merge: true }))
+        .pipe(rev.manifest(manifest, { merge: true }))
         .pipe(gulp.dest('./'));
 }
 
@@ -85,7 +86,6 @@ function svg() {
  * Remove all content within the destination folder
  */
 function clean() {
-    console.log('works');
     return del([`./${destination}/**`, `!./${destination}`]);
 }
 
