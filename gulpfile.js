@@ -50,8 +50,12 @@ function javascript() {
             compress: {
                 dead_code: true,
                 unused: true,
-                drop_debugger: true
-            }
+                drop_debugger: true,
+            },
+            output: {
+                comments: false,
+                quote_style: 1
+            },
         }))
         .pipe(rev())
         .pipe(gulp.dest(`${destination}/assets/js`))
