@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --watch --jit --purge ./**/*.html",
         "prod": "cross-env NODE_ENV=production npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --minify",
-        "gulp": "gulp"
+        "gulp": "gulp",
+        "updates": "ncu"
     },
     "keywords": [],
     "author": "",
@@ -23,6 +24,7 @@
         "gulp-rev": "^9.0.0",
         "gulp-rev-rewrite": "^4.0.0",
         "gulp-svgmin": "^3.0.0",
+        "npm-check-updates": "^11.7.1",
         "tailwindcss": "^2.2.0"
     }
 }
