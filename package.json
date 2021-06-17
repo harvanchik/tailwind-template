@@ -1,11 +1,11 @@
 {
     "name": "tailwind-template",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "description": "Jake Harvanchik's TailwindCSS Starter Template Project",
     "main": "index.js",
     "scripts": {
-        "dev": "cross-env NODE_ENV=development postcss ./assets/styles/tailwind.css -o ./assets/styles/styles.css -w --verbose",
-        "prod": "cross-env NODE_ENV=production postcss ./assets/styles/tailwind.css -o ./assets/styles/styles.css --verbose",
+        "dev": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --watch --jit --purge ./**/*.html",
+        "prod": "cross-env NODE_ENV=production npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --minify",
         "gulp": "gulp"
     },
     "keywords": [],
@@ -13,9 +13,8 @@
     "license": "ISC",
     "devDependencies": {
         "@tailwindcss/forms": "^0.3.3",
-        "autoprefixer": "^10.2.6",
         "cross-env": "^7.0.3",
-        "cssnano": "^5.0.5",
+        "cssnano": "^5.0.6",
         "del": "^6.0.0",
         "gulp": "^4.0.2",
         "gulp-htmlmin": "^5.0.1",
@@ -23,8 +22,6 @@
         "gulp-rev": "^9.0.0",
         "gulp-rev-rewrite": "^4.0.0",
         "gulp-svgmin": "^3.0.0",
-        "postcss": "^8.3.0",
-        "postcss-cli": "^8.3.1",
-        "tailwindcss": "^2.1.4"
+        "tailwindcss": "^2.2.0"
     }
 }
