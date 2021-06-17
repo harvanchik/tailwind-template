@@ -4,6 +4,7 @@ const del = require('del');
 const htmlmin = require('gulp-htmlmin');
 const jsmin = require('gulp-minify');
 const svgmin = require('gulp-svgmin');
+const image = require('gulp-image');
 const rev = require('gulp-rev');
 const rewrite = require('gulp-rev-rewrite');
 
@@ -64,10 +65,13 @@ function javascript() {
 }
 
 /*
- * Copy the Images
+ * Copy & Optimize the Images
  */
 function images() {
     return gulp.src([`${root}assets/img/**/*.{png,jpg,jpeg,jfif,gif,webp,pdf,bmp,tif,tiff,raw,cr2,nef,sr2,heif,hdr,ppm,pgm,pbm,pnm,exif}`])
+        .pipe(image({
+            quiet: true     // set to false to log results for every image processed
+        }))
         .pipe(rev())
         .pipe(gulp.dest(`${destination}/assets/img`))
         .pipe(rev.manifest(manifest, { merge: true }))
@@ -78,10 +82,10 @@ function images() {
  * Minify the SVGs
  */
 function svg() {
-    return gulp.src([`${root}assets/img/**/*.svg`])
+    return gulp.src([`${root}assets/img/svg/*.svg`])
         .pipe(svgmin())
         .pipe(rev())
-        .pipe(gulp.dest(`${destination}/assets/img`))
+        .pipe(gulp.dest(`${destination}/assets/img/svg`))
         .pipe(rev.manifest(manifest, { merge: true }))
         .pipe(gulp.dest(root));
 }
