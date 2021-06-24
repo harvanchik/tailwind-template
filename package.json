@@ -25,6 +25,6 @@
         "gulp-rev-rewrite": "^4.0.0",
         "gulp-svgmin": "^3.0.0",
         "npm-check-updates": "^11.7.1",
-        "tailwindcss": "^2.2.2"
+        "tailwindcss": "^2.2.4"
     }
 }
