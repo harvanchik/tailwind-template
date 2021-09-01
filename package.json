@@ -15,16 +15,16 @@
     "devDependencies": {
         "@tailwindcss/forms": "^0.3.3",
         "cross-env": "^7.0.3",
-        "cssnano": "^5.0.7",
+        "cssnano": "^5.0.8",
         "del": "^6.0.0",
         "gulp": "^4.0.2",
         "gulp-htmlmin": "^5.0.1",
         "gulp-image": "^6.2.1",
         "gulp-minify": "^3.1.0",
         "gulp-rev": "^9.0.0",
-        "gulp-rev-rewrite": "^4.0.0",
+        "gulp-rev-rewrite": "^5.0.0",
         "gulp-svgmin": "^4.0.1",
         "npm-check-updates": "^11.8.3",
-        "tailwindcss": "^2.2.6"
+        "tailwindcss": "^2.2.7"
     }
 }
