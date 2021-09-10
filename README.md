@@ -1,4 +1,8 @@
 # TailwindCSS Starter Template Documentation
+[![Maintenance](https://img.shields.io/badge/maintained%3F-yes-green.svg)](https://GitHub.com/harvanchik/tailwind-template/graphs/commit-activity)
+[![GitHub release](https://img.shields.io/github/release/harvanchik/tailwind-template.svg)](https://github.com/harvanchik/tailwind-template/releases/)
+![Maintainer](https://img.shields.io/badge/maintainer-harvanchik-blue)
+[![GitHub license](https://img.shields.io/github/license/harvanchik/tailwind-template.svg)](https://github.com/harvanchik/tailwind-template/blob/master/LICENSE)
 ## Getting Started
 ### Node Modules
 First and foremost, make sure to run `npm install` in the terminal in the root directory of this project.  This will install all of the required dependencies and generate your **node_modules** folder.  This step is very important.
