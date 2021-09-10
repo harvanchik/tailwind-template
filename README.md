@@ -1,4 +1,5 @@
 # TailwindCSS Starter Template Documentation
+![GitHub Actions Status](https://github.com/harvanchik/tailwind-template/workflows/NodeJS%20with%20Gulp/badge.svg)
 [![Maintenance](https://img.shields.io/badge/maintained%3F-yes-green.svg)](https://GitHub.com/harvanchik/tailwind-template/graphs/commit-activity)
 [![GitHub release](https://img.shields.io/github/release/harvanchik/tailwind-template.svg)](https://github.com/harvanchik/tailwind-template/releases/)
 ![Maintainer](https://img.shields.io/badge/maintainer-harvanchik-blue)
