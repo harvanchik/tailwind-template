@@ -23,8 +23,8 @@
         "gulp-minify": "^3.1.0",
         "gulp-rev": "^9.0.0",
         "gulp-rev-rewrite": "^5.0.0",
-        "gulp-svgmin": "^4.0.1",
+        "gulp-svgmin": "^4.1.0",
         "npm-check-updates": "^11.8.5",
-        "tailwindcss": "^2.2.16"
+        "tailwindcss": "^2.2.17"
     }
 }
