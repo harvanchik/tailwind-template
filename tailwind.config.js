@@ -1,17 +1,8 @@
 module.exports = {
-    mode: 'jit',
-    purge: {
-        // enabled: true,
-        content: ['./*.html', './**/*.html'],
-        options: {
-            keyframes: true
-        }
-    },
+    content: ['./**/*.html'],
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {},
     },
-    plugins: [
-        require("@tailwindcss/forms")
-    ],
+    plugins: [require("@tailwindcss/forms")],
 };

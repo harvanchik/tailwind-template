@@ -5,8 +5,8 @@
     "author": "Jake Harvanchik",
     "main": "index.js",
     "scripts": {
-        "dev": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --watch --jit --purge ./**/*.html",
-        "prod": "cross-env NODE_ENV=production npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --minify",
+        "dev": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --watch",
+        "prod": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --minify",
         "gulp": "gulp",
         "updates": "ncu"
     },
