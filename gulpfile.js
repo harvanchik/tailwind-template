@@ -1,18 +1,18 @@
-const gulp = require('gulp');
-const { readFileSync } = require('fs');
-const del = require('del');
-const htmlmin = require('gulp-htmlmin');
-const jsmin = require('gulp-minify');
-const svgmin = require('gulp-svgmin');
-const image = require('gulp-image');
-const rev = require('gulp-rev');
-const rewrite = require('gulp-rev-rewrite');
+import gulp from 'gulp';
+import { readFileSync } from 'fs';
+import del from 'del';
+import htmlmin from 'gulp-htmlmin';
+import jsmin from 'gulp-minify';
+import svgmin from 'gulp-svgmin';
+import image from 'gulp-image';
+import rev from 'gulp-rev';
+import rewrite from 'gulp-rev-rewrite';
 
 const root = './';  // the path to the root of your project (you probably do not need to change this)
 const destination = `${root}dist`;  // the destination folder of the gulped content (change as needed (i.e. 'docs'))
 const manifest = `${root}rev-manifest.json`;  // the name of the manifest file (do not edit unless you know what you're doing)
 
-/*
+/**
  * Minify the HTML
  */
 function html() {
@@ -29,7 +29,7 @@ function html() {
         .pipe(gulp.dest(destination));
 }
 
-/*
+/**
  * Copy the Styles
  */
 function styles() {
@@ -64,7 +64,7 @@ function javascript() {
         .pipe(gulp.dest(root));
 }
 
-/*
+/**
  * Copy & Optimize the Images
  */
 function images() {
@@ -78,7 +78,7 @@ function images() {
         .pipe(gulp.dest(root));
 }
 
-/*
+/**
  * Minify the SVGs
  */
 function svg() {
@@ -90,14 +90,14 @@ function svg() {
         .pipe(gulp.dest(root));
 }
 
-/*
+/**
  * Remove all content within the destination folder
  */
 function clean() {
     return del([`${destination}`]);
 }
 
-/*
+/**
  * The default task (triggered when running 'gulp' in the console)
  */
 gulp.task('default', gulp.series(clean, styles, javascript, images, svg, html));
