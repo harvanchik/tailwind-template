@@ -101,3 +101,7 @@ function clean() {
  * The default task (triggered when running 'gulp' in the console)
  */
 gulp.task('default', gulp.series(clean, styles, javascript, images, svg, html));
+/**
+ * Task to remove the destination folder and its contents.
+ */
+gulp.task('clean', clean);
