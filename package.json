@@ -8,7 +8,7 @@
         "dev": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --watch",
         "prod": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --minify",
         "gulp": "gulp",
-        "gulp clean": "gulp clean",
+        "clean": "gulp clean",
         "updates": "ncu"
     },
     "keywords": [],
