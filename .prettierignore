@@ -1,0 +1,10 @@
+# generated files (i.e. css, json, directories etc.)
+assets/styles/styles.css
+package-lock.json
+rev-manifest.json
+.vscode
+.github
+LICENSE
+node_modules
+docs
+dist
