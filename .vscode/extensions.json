@@ -1,0 +1,19 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+	// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+	// List of extensions which should be recommended for users of this workspace.
+	"recommendations": [
+		"VisualStudioExptTeam.vscodeintellicode",	// tailwind css intellisense
+		"austenc.tailwind-docs",	// tailwind css documentation
+		"PKief.material-icon-theme", 	// material icons
+		"christian-kohler.path-intellisense",	// path intellisense
+		"esbenp.prettier-vscode",	// prettier extension needed for class sorting
+		"jgclark.vscode-todo-highlight"		// todo comment highlighting
+	],
+	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+	"unwantedRecommendations": [
+		"heybourn.headwind",	// project uses prettier to sort classes
+		"macieklad.tailwind-sass-syntax"	// project does not use sass
+	]
+}
