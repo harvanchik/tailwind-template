@@ -38,7 +38,7 @@ To work in a development environment, run the `dev` npm script. To do so, use ei
 - Run `npm run dev` in the root folder of the project.
 - Use the NPM scripts shortcut in the [bottom left corner of the File Explorer tab in VS Code](https://imgur.com/a/pLlZvpk.png).
 
-This will start a **long-running watch process** that will **generate** your styles **on-demand** instead of generating everything in advance. This is extremely useful for making development quicker and more efficient. In the terminal, you should see the initial complie message and the amount of time it took. Anytime you save an HTML file, the **tailwind.css** file, or the **tailwind.config.js** file, the CSS will be processed and re-compiled. These styles will not be minified in the development process.
+This will start a **long-running watch process** that will **generate** your styles **on-demand** instead of generating everything in advance. This is extremely useful for making development quicker and more efficient. In the terminal, you should see the initial compile message and the amount of time it took. Anytime you save an HTML file, the **tailwind.css** file, or the **tailwind.config.js** file, the CSS will be processed and re-compiled. These styles will not be minified in the development process.
 
 Please note that classes are added on-demand, but not removed on-demand. This is currently by design as [stated by Adam Wathan](https://github.com/tailwindlabs/tailwindcss/issues/4098#issuecomment-821867583 'stated by Adam Wathan'), the creator of TailwindCSS. To work around this (cache bust it), simply save the **tailwind.css** file. It will force a full re-compile and remove any unused classes.
 
@@ -48,7 +48,7 @@ To kill the watch process, put your focus in the terminal that the process is ru
 
 We will be using a VS Code extension to start our server up. Search for "Live Server" in the VS Code extensions tab. Alternatively, you can find it on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
-Once you download and install the extension, you might see a [new button](https://imgur.com/a/KiUuKno.png) in the lower right-hand corner of the window in the blue riddon. It says **Go Live**. When you click that, it should start the server and open it on your browser.
+Once you download and install the extension, you might see a [new button](https://imgur.com/a/KiUuKno.png) in the lower right-hand corner of the window in the blue ribbon. It says **Go Live**. When you click that, it should start the server and open it on your browser.
 
 If you do not see the button, simply [right click](https://imgur.com/a/SR1f6sC.png) on the **index.html** file in the VS Code file explorer, and click **Open with Live Server**.
 
