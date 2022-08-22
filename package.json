@@ -1,6 +1,6 @@
 {
   "name": "tailwind-template",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Jake Harvanchik's TailwindCSS Starter Template Project",
   "author": "Jake Harvanchik",
   "main": "index.js",
