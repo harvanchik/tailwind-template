@@ -1,4 +1,4 @@
-# TailwindCSS Starter Template Documentation
+# Tailwind CSS Starter Template Documentation
 
 <!-- ![GitHub Actions Status](https://github.com/harvanchik/tailwind-template/workflows/NodeJS%20with%20Gulp/badge.svg) -->
 
@@ -15,21 +15,21 @@ First and foremost, make sure to run `npm install` in the terminal in the root d
 
 ## Project Styles
 
-### TailwindCSS
+### Tailwind CSS
 
-This project uses [TailwindCSS](https://tailwindcss.com/ 'TailwindCSS'), a utility-first CSS framework. The required dependencies should already be included in this project. If you are missing the **node_modules** folder, simply run `npm install`, and it should generate with the dependencies specified in the **package.json** file.
+This project uses [Tailwind CSS](https://tailwindcss.com/ 'TailwindCSS'), a utility-first CSS framework. The required dependencies should already be included in this project. If you are missing the **node_modules** folder, simply run `npm install`, and it should generate with the dependencies specified in the **package.json** file.
 
 ### Tailwind Intellisense
 
-To enable Tailwind CSS Intellisense, you'll need the VS Code extension. I suggest installing the [Tailwind CSS Extension Pack](https://marketplace.visualstudio.com/items?itemName=andrewmcodes.tailwindcss-extension-pack) which comes with a few extensions that all work together to make using TailwindCSS a much better experience. To learn more about it, click the link above.
+To enable Tailwind CSS Intellisense, you'll need the VS Code extension. I suggest installing the [Tailwind CSS Extension Pack](https://marketplace.visualstudio.com/items?itemName=andrewmcodes.tailwindcss-extension-pack) which comes with a few extensions that all work together to make using Tailwind CSS a much better experience. To learn more about it, click the link above.
 
 ### Files
 
-In the root folder of the project, there is an **assets/styles** folder. This houses the **tailwind.css** file. This file is used to eventually generate the fully compiled TailwindCSS styles. Once compiled, it outputs the classes to the **styles.css** file, also located in the **assets/styles** folder.
+In the root folder of the project, there is an **assets/styles** folder. This houses the **tailwind.css** file. This file is used to eventually generate the fully compiled Tailwind CSS styles. Once compiled, it outputs the classes to the **styles.css** file, also located in the **assets/styles** folder.
 
 ### Just In Time Mode
 
-This project uses a version of TailwindCSS called [Just In Time (JIT)](https://tailwindcss.com/docs/just-in-time-mode 'Just In Time (JIT)') mode. Essentially, this means that our **styles.css** file will only include CSS classes that it finds in our HTML files in the root folder. This can be [disabled](https://tailwindcss.com/docs/just-in-time-mode#enabling-jit-mode 'disabled') in the **tailwind.config.js** file. By disabling this, TailwindCSS will generate every single class it offers by default and you will make an extremely large CSS file, which is something we want to avoid.
+This project uses a version of Tailwind CSS called [Just In Time (JIT)](https://tailwindcss.com/docs/just-in-time-mode 'Just In Time (JIT)') mode. Essentially, this means that our **styles.css** file will only include CSS classes that it finds in our HTML files in the root folder. This can be [disabled](https://tailwindcss.com/docs/just-in-time-mode#enabling-jit-mode 'disabled') in the **tailwind.config.js** file. By disabling this, Tailwind CSS will generate every single class it offers by default and you will make an extremely large CSS file, which is something we want to avoid.
 
 ## Working in Development
 
@@ -40,7 +40,7 @@ To work in a development environment, run the `dev` npm script. To do so, use ei
 
 This will start a **long-running watch process** that will **generate** your styles **on-demand** instead of generating everything in advance. This is extremely useful for making development quicker and more efficient. In the terminal, you should see the initial compile message and the amount of time it took. Anytime you save an HTML file, the **tailwind.css** file, or the **tailwind.config.js** file, the CSS will be processed and re-compiled. These styles will not be minified in the development process.
 
-Please note that classes are added on-demand, but not removed on-demand. This is currently by design as [stated by Adam Wathan](https://github.com/tailwindlabs/tailwindcss/issues/4098#issuecomment-821867583 'stated by Adam Wathan'), the creator of TailwindCSS. To work around this (cache bust it), simply save the **tailwind.css** file. It will force a full re-compile and remove any unused classes.
+Please note that classes are added on-demand, but not removed on-demand. This is currently by design as [stated by Adam Wathan](https://github.com/tailwindlabs/tailwindcss/issues/4098#issuecomment-821867583 'stated by Adam Wathan'), the creator of Tailwind CSS. To work around this (cache bust it), simply save the **tailwind.css** file. It will force a full re-compile and remove any unused classes.
 
 To kill the watch process, put your focus in the terminal that the process is running it, and press `CTRL + C`. You should be prompted to confirm your termination of the process. Confirm your choice by entering `Y` followed by the `ENTER` key.
 
