@@ -1,6 +1,6 @@
 {
   "name": "tailwind-template",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "Jake Harvanchik's TailwindCSS Starter Template Project",
   "author": "Jake Harvanchik",
   "main": "index.js",
@@ -8,8 +8,7 @@
     "dev": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --watch",
     "prod": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --minify",
     "gulp": "gulp",
-    "clean": "gulp clean",
-    "updates": "ncu"
+    "clean": "gulp clean"
   },
   "keywords": [],
   "license": "ISC",
@@ -28,6 +27,6 @@
     "gulp-svgmin": "^4.1.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
-    "tailwindcss": "^3.1.8"
+    "tailwindcss": "^3.2.0"
   }
 }
