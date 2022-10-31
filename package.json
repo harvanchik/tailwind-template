@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --watch",
     "prod": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --minify",
-    "gulp": "gulp",
+    "gulp": "npm run prod && gulp",
     "clean": "gulp clean"
   },
   "keywords": [],
