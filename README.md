@@ -11,13 +11,13 @@
 
 ### Node Modules
 
-First and foremost, make sure to run `npm install` in the terminal in the root directory of this project. This will install all of the required dependencies and generate your **node_modules** folder. This step is very important.
+First and foremost, make sure to run `pnpm install` in the terminal in the root directory of this project. This will install all of the required dependencies and generate your **node_modules** folder. This step is very important.
 
 ## Project Styles
 
 ### Tailwind CSS
 
-This project uses [Tailwind CSS](https://tailwindcss.com/ 'TailwindCSS'), a utility-first CSS framework. The required dependencies should already be included in this project. If you are missing the **node_modules** folder, simply run `npm install`, and it should generate with the dependencies specified in the **package.json** file.
+This project uses [Tailwind CSS](https://tailwindcss.com/ 'TailwindCSS'), a utility-first CSS framework. The required dependencies should already be included in this project. If you are missing the **node_modules** folder, simply run `pnpm install`, and it should generate with the dependencies specified in the **package.json** file.
 
 ### Tailwind Intellisense
 
