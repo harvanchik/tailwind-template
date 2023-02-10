@@ -1,13 +1,13 @@
 {
   "name": "tailwind-template",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "Jake Harvanchik's TailwindCSS Starter Template Project",
   "author": "Jake Harvanchik",
   "main": "index.js",
   "scripts": {
     "dev": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --watch",
     "prod": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --minify",
-    "gulp": "npm run prod && gulp",
+    "gulp": "pnpm run prod && gulp",
     "clean": "gulp clean",
     "pnpm": "pnpm install"
   },
