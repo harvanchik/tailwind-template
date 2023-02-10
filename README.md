@@ -33,9 +33,9 @@ This project uses a version of Tailwind CSS called [Just In Time (JIT)](https://
 
 ## Working in Development
 
-To work in a development environment, run the `dev` npm script. To do so, use either method outlined below.
+To work in a development environment, run the `dev` NPM script. To do so, use either method outlined below.
 
-- Run `npm run dev` in the root folder of the project.
+- Run `pnpm run dev` in the root folder of the project.
 - Use the NPM scripts shortcut in the [bottom left corner of the File Explorer tab in VS Code](https://imgur.com/a/pLlZvpk.png).
 
 This will start a **long-running watch process** that will **generate** your styles **on-demand** instead of generating everything in advance. This is extremely useful for making development quicker and more efficient. In the terminal, you should see the initial compile message and the amount of time it took. Anytime you save an HTML file, the **tailwind.css** file, or the **tailwind.config.js** file, the CSS will be processed and re-compiled. These styles will not be minified in the development process.
@@ -56,7 +56,7 @@ If you do not see the button, simply [right click](https://imgur.com/a/SR1f6sC.p
 
 Building for production is similar to building for development. Do either of the following to build the CSS for production.
 
-- Run `npm run prod` in the root folder of the project.
+- Run `pnpm run prod` in the root folder of the project.
 - Execute `prod` in the NPM scripts shortcut located at the [bottom left of the File Explorer tab in VS Code](https://imgur.com/a/sXlKWwV.png).
 
 Contrary to the development script we used before, this will **not** start a long-running watch process; rather, this script compiles the CSS once and only once. It will take only classes found in the HTML files located in the root folder and compile them into the **styles.css** file located in **assets/styles/styles.css**. These styles will be minified.
@@ -67,13 +67,13 @@ This project uses [Gulp](https://www.npmjs.com/package/gulp) to build the projec
 
 In addition to that, Gulp will also optimize and minify the files as needed. The HTML, SVG, and JavaScript files will all be minified. Minifying a file simply means removing whitespace and other unnecessary characters/symbols. We do this to reduce the size of the files(s).
 
-The styles (css) will be copied over to the dist as well. Since the css is already minified by Tailwind CLI's use of [PostCSS](https://postcss.org/) and the [JIT Engine](https://tailwindcss.com/docs/just-in-time-mode), we do not need to minify it here. It is **important** to first run `npm run prod` before running `gulp`. By not doing this, gulp will be using the non-minified version of your CSS.
+The styles (css) will be copied over to the dist as well. Since the css is already minified by Tailwind CLI's use of [PostCSS](https://postcss.org/) and the [JIT Engine](https://tailwindcss.com/docs/just-in-time-mode), we do not need to minify it here. It is **important** to first run `pnpm run prod` before running `gulp`. By not doing this, gulp will be using the non-minified version of your CSS.
 
 The images will also be copied over as well and optimized using [gulp-image](https://www.npmjs.com/package/gulp-image), an image optimizer. This will **only** optimize PNG, JPG, and GIF images. Nearly every other image type will be copied over, but not optimized, including PDF files.
 
 ### Using Gulp
 
-So how do you use Gulp? It's very easy! Here are three options. 1) Open the [VS Code terminal](https://imgur.com/a/JbdX0if.png) and run the command `gulp`. This will execute the default task found in the **gulpfile.js** file in the root directory. The default task then executes, in order, all of the other tasks to build the project. 2) Alternatively, I have created an NPM script called `gulp`. You can run this from the [bottom left corner of the VS Code window in the NPM Scripts tab](https://imgur.com/a/3hGD00j.png). 3) If you do not see the NPM scripts tab, you may also [run this command in the terminal](https://imgur.com/a/Ucmbmtz.png) by running `npm run gulp`, but at that point, just typing `gulp` is easier.
+So how do you use Gulp? It's very easy! Here are three options. 1) Open the [VS Code terminal](https://imgur.com/a/JbdX0if.png) and run the command `gulp`. This will execute the default task found in the **gulpfile.js** file in the root directory. The default task then executes, in order, all of the other tasks to build the project. 2) Alternatively, I have created an NPM script called `gulp`. You can run this from the [bottom left corner of the VS Code window in the NPM Scripts tab](https://imgur.com/a/3hGD00j.png). 3) If you do not see the NPM scripts tab, you may also [run this command in the terminal](https://imgur.com/a/Ucmbmtz.png) by running `pnpm run gulp`, but at that point, just typing `gulp` is easier.
 
 ### What if I Need a Different Output Folder Name?
 
