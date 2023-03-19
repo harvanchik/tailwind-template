@@ -15,7 +15,7 @@ specifiers:
   gulp-svgmin: ^4.1.0
   postcss: ^8.4.21
   prettier: ^2.8.4
-  prettier-plugin-tailwindcss: ^0.2.4
+  prettier-plugin-tailwindcss: ^0.2.5
   tailwindcss: ^3.2.7
 
 devDependencies:
@@ -33,7 +33,7 @@ devDependencies:
   gulp-svgmin: 4.1.0
   postcss: 8.4.21
   prettier: 2.8.4
-  prettier-plugin-tailwindcss: 0.2.4_prettier@2.8.4
+  prettier-plugin-tailwindcss: 0.2.5_prettier@2.8.4
   tailwindcss: 3.2.7_postcss@8.4.21
 
 packages:
@@ -3602,8 +3602,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /prettier-plugin-tailwindcss/0.2.4_prettier@2.8.4:
-    resolution: {integrity: sha512-wMyugRI2yD8gqmMpZSS8kTA0gGeKozX/R+w8iWE+yiCZL09zY0SvfiHfHabNhjGhzxlQ2S2VuTxPE3T72vppCQ==}
+  /prettier-plugin-tailwindcss/0.2.5_prettier@2.8.4:
+    resolution: {integrity: sha512-vZ/iKieyCx0WTxHbkf5E1rBlv/ybFk8WTT4hL5W2jlVxum2Zbe0jMUpuQdDrpa4z2vnPiJ5KIWCqL/kd16fKYg==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
