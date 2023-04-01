@@ -15,11 +15,11 @@ specifiers:
   gulp-svgmin: ^4.1.0
   postcss: ^8.4.21
   prettier: ^2.8.7
-  prettier-plugin-tailwindcss: ^0.2.5
-  tailwindcss: ^3.3.0
+  prettier-plugin-tailwindcss: ^0.2.6
+  tailwindcss: ^3.3.1
 
 devDependencies:
-  '@tailwindcss/forms': 0.5.3_tailwindcss@3.3.0
+  '@tailwindcss/forms': 0.5.3_tailwindcss@3.3.1
   autoprefixer: 10.4.14_postcss@8.4.21
   cross-env: 7.0.3
   cssnano: 6.0.0_postcss@8.4.21
@@ -33,8 +33,8 @@ devDependencies:
   gulp-svgmin: 4.1.0
   postcss: 8.4.21
   prettier: 2.8.7
-  prettier-plugin-tailwindcss: 0.2.5_prettier@2.8.7
-  tailwindcss: 3.3.0_postcss@8.4.21
+  prettier-plugin-tailwindcss: 0.2.6_prettier@2.8.7
+  tailwindcss: 3.3.1_postcss@8.4.21
 
 packages:
 
@@ -64,13 +64,13 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /@tailwindcss/forms/0.5.3_tailwindcss@3.3.0:
+  /@tailwindcss/forms/0.5.3_tailwindcss@3.3.1:
     resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.3.0_postcss@8.4.21
+      tailwindcss: 3.3.1_postcss@8.4.21
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -2607,11 +2607,6 @@ packages:
       - supports-color
     dev: true
 
-  /lilconfig/2.0.6:
-    resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
-    engines: {node: '>=10'}
-    dev: true
-
   /lilconfig/2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
     engines: {node: '>=10'}
@@ -3674,8 +3669,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /prettier-plugin-tailwindcss/0.2.5_prettier@2.8.7:
-    resolution: {integrity: sha512-vZ/iKieyCx0WTxHbkf5E1rBlv/ybFk8WTT4hL5W2jlVxum2Zbe0jMUpuQdDrpa4z2vnPiJ5KIWCqL/kd16fKYg==}
+  /prettier-plugin-tailwindcss/0.2.6_prettier@2.8.7:
+    resolution: {integrity: sha512-F+7XCl9RLF/LPrGdUMHWpsT6TM31JraonAUyE6eBmpqymFvDwyl0ETHsKFHP1NG+sEfv8bmKqnTxEbWQbHPlBA==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
@@ -4424,8 +4419,8 @@ packages:
       picocolors: 1.0.0
     dev: true
 
-  /tailwindcss/3.3.0_postcss@8.4.21:
-    resolution: {integrity: sha512-hOXlFx+YcklJ8kXiCAfk/FMyr4Pm9ck477G0m/us2344Vuj355IpoEDB5UmGAsSpTBmr+4ZhjzW04JuFXkb/fw==}
+  /tailwindcss/3.3.1_postcss@8.4.21:
+    resolution: {integrity: sha512-Vkiouc41d4CEq0ujXl6oiGFQ7bA3WEhUZdTgXAhtKxSy49OmKs8rEfQmupsfF0IGW8fv2iQkp1EVUuapCFrZ9g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
@@ -4440,7 +4435,7 @@ packages:
       glob-parent: 6.0.2
       is-glob: 4.0.3
       jiti: 1.18.2
-      lilconfig: 2.0.6
+      lilconfig: 2.1.0
       micromatch: 4.0.5
       normalize-path: 3.0.0
       object-hash: 3.0.0
