@@ -1,6 +1,6 @@
 {
   "name": "tailwind-template",
-  "version": "1.8.6",
+  "version": "1.8.7",
   "description": "Jake Harvanchik's TailwindCSS Starter Template Project",
   "author": "Jake Harvanchik",
   "main": "index.js",
@@ -26,9 +26,9 @@
     "gulp-rev": "^10.0.0",
     "gulp-rev-rewrite": "^5.0.0",
     "gulp-svgmin": "^4.1.0",
-    "postcss": "^8.4.21",
-    "prettier": "^2.8.7",
-    "prettier-plugin-tailwindcss": "^0.2.6",
-    "tailwindcss": "^3.3.1"
+    "postcss": "^8.4.23",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.7",
+    "tailwindcss": "^3.3.2"
   }
 }
