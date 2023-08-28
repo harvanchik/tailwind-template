@@ -10,8 +10,16 @@
   </head>
 
   <body>
-    <section class="flex h-screen w-full items-center justify-center">
-      <h1 class="text-5xl">Hello World</h1>
+    <!-- START: Colorful Blurred Background -->
+    <div class="absolute h-screen w-screen">
+      <div class="absolute h-[20rem] w-[30rem] m-[20rem] rotate-45 bg-blue-400"></div>
+      <div class="absolute h-[20rem] w-[35rem] right-[15rem] top-[15rem] rotate-[60deg] bg-purple-400"></div>
+    </div>
+    <!-- END: Colorful Blurred Background -->
+    <!-- START: Main Section -->
+    <section class="flex h-screen w-full items-center justify-center backdrop-blur-[190px]">
+      <h1 class="text-5xl font-semibold text-stone-800">Hello World</h1>
     </section>
+    <!-- END: Main Section -->
   </body>
 </html>
