@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@tailwindcss/forms':
-    specifier: ^0.5.6
-    version: 0.5.6(tailwindcss@3.3.5)
+    specifier: ^0.5.7
+    version: 0.5.7(tailwindcss@3.3.5)
   autoprefixer:
     specifier: 10.4.16
     version: 10.4.16(postcss@8.4.31)
@@ -33,8 +33,8 @@ devDependencies:
     specifier: ^3.1.0
     version: 3.1.0
   gulp-rev:
-    specifier: ^10.0.0
-    version: 10.0.0(gulp@4.0.2)
+    specifier: ^11.0.0
+    version: 11.0.0(gulp@4.0.2)
   gulp-rev-rewrite:
     specifier: ^6.0.0
     version: 6.0.0
@@ -45,11 +45,11 @@ devDependencies:
     specifier: ^8.4.31
     version: 8.4.31
   prettier:
-    specifier: ^3.0.3
-    version: 3.0.3
+    specifier: ^3.1.0
+    version: 3.1.0
   prettier-plugin-tailwindcss:
-    specifier: ^0.5.6
-    version: 0.5.6(prettier@3.0.3)
+    specifier: ^0.5.7
+    version: 0.5.7(prettier@3.1.0)
   tailwindcss:
     specifier: ^3.3.5
     version: 3.3.5
@@ -121,8 +121,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /@tailwindcss/forms@0.5.6(tailwindcss@3.3.5):
-    resolution: {integrity: sha512-Fw+2BJ0tmAwK/w01tEFL5TiaJBX1NLT1/YbWgvm7ws3Qcn11kiXxzNTEQDMs5V3mQemhB56l3u0i9dwdzSQldA==}
+  /@tailwindcss/forms@0.5.7(tailwindcss@3.3.5):
+    resolution: {integrity: sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
@@ -152,6 +152,13 @@ packages:
   /@types/responselike@1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
+      '@types/node': 18.11.18
+    dev: true
+
+  /@types/vinyl@2.0.11:
+    resolution: {integrity: sha512-vPXzCLmRp74e9LsP8oltnWKTH+jBwt86WgRUb4Pc9Lf3pkMVGyvIo2gm9bODeGfCay2DBB/hAWDuvf07JcK4rw==}
+    dependencies:
+      '@types/expect': 1.20.4
       '@types/node': 18.11.18
     dev: true
 
@@ -678,6 +685,11 @@ packages:
       isurl: 1.0.0
       tunnel-agent: 0.6.0
       url-to-options: 1.0.1
+    dev: true
+
+  /chalk@5.3.0:
+    resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
 
   /chokidar@2.1.8:
@@ -1322,8 +1334,8 @@ packages:
       object.defaults: 1.1.0
     dev: true
 
-  /easy-transform-stream@1.0.0:
-    resolution: {integrity: sha512-kIEXvPNtqUQ/lrgkULIP0/l2m88Ahlk2ySZhmuLdRidXBIEPyHuDgDt04b9DvnCy+nIQDjpygVft+Op3PZFUQg==}
+  /easy-transform-stream@1.0.1:
+    resolution: {integrity: sha512-ktkaa6XR7COAR3oj02CF3IOgz2m1hCaY3SfzvKT4Svt2MhHw9XCt+ncJNWfe2TGz31iqzNGZ8spdKQflj+Rlog==}
     engines: {node: '>=14.16'}
     dev: true
 
@@ -2101,6 +2113,15 @@ packages:
       vinyl: 2.2.1
     dev: true
 
+  /gulp-plugin-extras@0.3.0:
+    resolution: {integrity: sha512-I/kOBSpo61QsGQZcqozZYEnDseKvpudUafVVWDLYgBFAUJ37kW5R8Sjw9cMYzpGyPUfEYOeoY4p+dkfLqgyJUQ==}
+    engines: {node: '>=18'}
+    dependencies:
+      '@types/vinyl': 2.0.11
+      chalk: 5.3.0
+      easy-transform-stream: 1.0.1
+    dev: true
+
   /gulp-rev-rewrite@6.0.0:
     resolution: {integrity: sha512-SKefSq5FVw7VAzPr8ZBvVMH7s1M7GXHyNhPlP/3k1IkD7lObLbVK8/WCY632+zfHJkc6kMsPlz4TP9lEA++4wg==}
     engines: {node: '>=18'}
@@ -2109,20 +2130,19 @@ packages:
       plugin-error: 2.0.1
     dev: true
 
-  /gulp-rev@10.0.0(gulp@4.0.2):
-    resolution: {integrity: sha512-5mP6oOGp1DUzBQuiy9IrtyAWHWUOz2n1qLUHfo7LU0p111t7sTkUhKW01b70B2MsDWgScTdz6sGLg76KCbqclw==}
-    engines: {node: '>=16'}
+  /gulp-rev@11.0.0(gulp@4.0.2):
+    resolution: {integrity: sha512-KJSyw0qMQBL0xB3YhYrdinelbnWnYHDxj3jqVL2Xvn8bUA1lh7py5/2Z6fUgIWiX+F1XyKYVxI8yy9asIAvZJA==}
+    engines: {node: '>=18'}
     peerDependencies:
       gulp: '>=4'
     peerDependenciesMeta:
       gulp:
         optional: true
     dependencies:
-      easy-transform-stream: 1.0.0
       gulp: 4.0.2
+      gulp-plugin-extras: 0.3.0
       modify-filename: 2.0.0
-      plugin-error: 2.0.1
-      rev-hash: 4.0.0
+      rev-hash: 4.1.0
       rev-path: 3.0.0
       sort-keys: 5.0.0
       vinyl: 3.0.0
@@ -3752,8 +3772,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.6(prettier@3.0.3):
-    resolution: {integrity: sha512-2Xgb+GQlkPAUCFi3sV+NOYcSI5XgduvDBL2Zt/hwJudeKXkyvRS65c38SB0yb9UB40+1rL83I6m0RtlOQ8eHdg==}
+  /prettier-plugin-tailwindcss@0.5.7(prettier@3.1.0):
+    resolution: {integrity: sha512-4v6uESAgwCni6YF6DwJlRaDjg9Z+al5zM4JfngcazMy4WEf/XkPS5TEQjbD+DZ5iNuG6RrKQLa/HuX2SYzC3kQ==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
@@ -3804,11 +3824,11 @@ packages:
       prettier-plugin-twig-melody:
         optional: true
     dependencies:
-      prettier: 3.0.3
+      prettier: 3.1.0
     dev: true
 
-  /prettier@3.0.3:
-    resolution: {integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==}
+  /prettier@3.1.0:
+    resolution: {integrity: sha512-TQLvXjq5IAibjh8EpBIkNKxO749UEWABoiIZehEPiY4GNpVdhaFKqSTu+QrlU6D2dPAfubRmtJTi4K4YkQ5eXw==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -4051,8 +4071,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rev-hash@4.0.0:
-    resolution: {integrity: sha512-5w/auZRs65pf1AkZIbfICeorQfOCb6XVWaHmDEbkMyjmyRMxck+W0Erdj9zffuBRXxn5cbKfgmWQ9GpgR8dFZQ==}
+  /rev-hash@4.1.0:
+    resolution: {integrity: sha512-e0EGnaveLY2IYpYwHNdh43WZ2M84KgW3Z/T4F6+Z/BlZI/T1ZbxTWj36xgYgUPOieGXYo2q225jTeUXn+LWYjw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
 

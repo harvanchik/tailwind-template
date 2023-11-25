@@ -14,7 +14,7 @@
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/forms": "^0.5.7",
     "autoprefixer": "10.4.16",
     "cross-env": "^7.0.3",
     "cssnano": "^6.0.1",
@@ -23,12 +23,12 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-image": "^6.3.1",
     "gulp-minify": "^3.1.0",
-    "gulp-rev": "^10.0.0",
+    "gulp-rev": "^11.0.0",
     "gulp-rev-rewrite": "^6.0.0",
     "gulp-svgmin": "^4.1.0",
     "postcss": "^8.4.31",
-    "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.6",
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3.3.5"
   }
 }
