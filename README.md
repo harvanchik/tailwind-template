@@ -27,10 +27,6 @@ To enable Tailwind CSS Intellisense, you'll need the VS Code extension. I sugges
 
 In the root folder of the project, there is an **assets/styles** folder. This houses the **tailwind.css** file. This file is used to eventually generate the fully compiled Tailwind CSS styles. Once compiled, it outputs the classes to the **styles.css** file, also located in the **assets/styles** folder.
 
-### Just In Time Mode
-
-This project uses a version of Tailwind CSS called [Just In Time (JIT)](https://tailwindcss.com/docs/just-in-time-mode 'Just In Time (JIT)') mode. Essentially, this means that our **styles.css** file will only include CSS classes that it finds in our HTML files in the root folder. This can be [disabled](https://tailwindcss.com/docs/just-in-time-mode#enabling-jit-mode 'disabled') in the **tailwind.config.js** file. By disabling this, Tailwind CSS will generate every single class it offers by default and you will make an extremely large CSS file, which is something we want to avoid.
-
 ## Working in Development
 
 To work in a development environment, run the `dev` NPM script. To do so, use either method outlined below.
