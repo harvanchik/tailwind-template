@@ -30,5 +30,8 @@
     "prettier": "^3.3.0",
     "prettier-plugin-tailwindcss": "^0.6.1",
     "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "@tailwindcss/container-queries": "^0.1.1"
   }
 }
