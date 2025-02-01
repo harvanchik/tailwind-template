@@ -1,6 +1,6 @@
 import gulp from 'gulp';
-import { readFileSync } from 'fs';
-import { deleteAsync } from 'del';
+import { readFileSync } from 'node:fs';
+import { deleteSync } from 'del';
 import htmlmin from 'gulp-htmlmin';
 import jsmin from 'gulp-minify';
 import svgmin from 'gulp-svgmin';
@@ -30,7 +30,7 @@ function html() {
         minifyJS: true,
         removeEmptyAttributes: true,
         removeAttributeQuotes: true,
-      })
+      }),
     )
     .pipe(rewrite({ manifest: readFileSync(manifest) }))
     .pipe(gulp.dest(destination));
@@ -67,7 +67,7 @@ function javascript() {
           comments: false,
           quote_style: 1,
         },
-      })
+      }),
     )
     .pipe(rev())
     .pipe(gulp.dest(`${destination}/assets/js`))
@@ -86,7 +86,7 @@ function images() {
     .pipe(
       image({
         quiet: true, // set to false to log results for every image processed
-      })
+      }),
     )
     .pipe(rev())
     .pipe(gulp.dest(`${destination}/assets/img`))
@@ -111,7 +111,7 @@ function svg() {
  * Remove all content within the destination folder
  */
 function clean() {
-  return deleteAsync([`${destination}`]);
+  return deleteSync([`${destination}`]); // use deleteSync
 }
 
 /**
