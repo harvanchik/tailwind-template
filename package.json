@@ -5,8 +5,8 @@
   "author": "Jake Harvanchik",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --watch",
-    "prod": "npx tailwindcss -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --minify",
+    "dev": "npx @tailwindcss/cli -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --watch",
+    "prod": "npx @tailwindcss/cli -i ./assets/styles/tailwind.css -o ./assets/styles/styles.css --minify",
     "gulp": "pnpm run prod && gulp",
     "clean": "gulp clean",
     "pnpm": "pnpm install"
@@ -14,7 +14,7 @@
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/forms": "^0.5.10",
     "autoprefixer": "10.4.20",
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.6",
@@ -26,12 +26,13 @@
     "gulp-rev": "^11.0.0",
     "gulp-rev-rewrite": "^6.0.0",
     "gulp-svgmin": "^4.1.0",
-    "postcss": "^8.4.47",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.8",
-    "tailwindcss": "^3.4.14"
+    "postcss": "^8.5.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.0.3"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.0.3",
     "@tailwindcss/container-queries": "^0.1.1"
   }
 }
