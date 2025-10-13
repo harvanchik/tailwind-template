@@ -110,8 +110,9 @@ function svg() {
 /**
  * Remove all content within the destination folder
  */
-function clean() {
-  return deleteSync([`${destination}`]); // use deleteSync
+function clean(cb) {
+  deleteSync([`${destination}`]);
+  cb();
 }
 
 /**

@@ -1,0 +1,9 @@
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@tailwindcss/oxide'
+  - gifsicle
+  - jpeg-recompress-bin
+  - mozjpeg
+  - optipng-bin
+  - pngquant-bin
+  - zopflipng-bin
