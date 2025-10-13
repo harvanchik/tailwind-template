@@ -27,7 +27,17 @@ function html() {
         collapseWhitespace: true,
         removeComments: true,
         minifyCSS: true,
-        minifyJS: true,
+        minifyJS: {
+          compress: {
+            dead_code: true,
+            unused: true,
+            drop_debugger: true,
+          },
+          output: {
+            comments: false,
+            quote_style: 1,
+          },
+        },
         removeEmptyAttributes: true,
         removeAttributeQuotes: true,
       }),
