@@ -9,20 +9,72 @@
     <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
 
-  <body>
-    <!-- START: Colorful Blurred Background -->
-    <div class="absolute h-screen w-screen">
-      <div
-        class="absolute h-[25rem] w-[40rem] rounded-full m-[22rem] rotate-45 bg-blue-400"></div>
-      <div
-        class="absolute h-[25rem] w-[45rem] rounded-full right-[23rem] top-[15rem] rotate-[-60deg] bg-purple-400"></div>
-    </div>
-    <!-- END: Colorful Blurred Background -->
+  <body class="bg-gradient-to-br from-blue-100 to-purple-100 min-h-screen">
     <!-- START: Main Section -->
     <section
-      class="flex h-screen w-full items-center justify-center backdrop-blur-[190px]">
-      <h1 class="text-6xl font-semibold text-stone-800">Hello World</h1>
+      class="flex h-screen w-full items-center justify-center relative overflow-hidden">
+      <div class="text-center relative" id="hello-text">
+        <h1
+          class="text-6xl font-bold text-gray-800 mb-4 transition-all duration-700 ease-in-out">
+          Hello World
+        </h1>
+      </div>
     </section>
     <!-- END: Main Section -->
+
+    <script>
+      const helloText = document.getElementById('hello-text');
+      const maxRadius = 80; // Increased radius for more movement range
+
+      // Variables for smooth interpolation
+      let currentX = 0;
+      let currentY = 0;
+      let targetX = 0;
+      let targetY = 0;
+      const easeFactor = 0.05; // Much slower, smoother movement (5% per frame)
+
+      function animate() {
+        // Smooth interpolation towards target position
+        currentX += (targetX - currentX) * easeFactor;
+        currentY += (targetY - currentY) * easeFactor;
+
+        // Apply the smooth movement
+        helloText.style.transform = `translate(${currentX}px, ${currentY}px)`;
+
+        // Continue animation
+        requestAnimationFrame(animate);
+      }
+
+      document.addEventListener('mousemove', e => {
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        // Calculate distance from center
+        const deltaX = mouseX - centerX;
+        const deltaY = mouseY - centerY;
+        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+        // Calculate movement within radius
+        let moveX = deltaX;
+        let moveY = deltaY;
+
+        if (distance > maxRadius) {
+          // If cursor is outside radius, limit movement to maxRadius
+          const ratio = maxRadius / distance;
+          moveX = deltaX * ratio;
+          moveY = deltaY * ratio;
+        }
+
+        // Set target position (much gentler movement)
+        targetX = moveX * 0.15; // Reduced from 30% to 15% for slower effect
+        targetY = moveY * 0.15;
+      });
+
+      // Start the smooth animation loop
+      animate();
+    </script>
   </body>
 </html>
